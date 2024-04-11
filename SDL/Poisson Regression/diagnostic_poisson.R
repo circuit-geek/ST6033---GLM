@@ -23,7 +23,6 @@ z <- predict(modp)+(gala$Species-mu)/mu
 
 plot(z ~ log(Area), gala,ylab="Linearized Response")
 
-
 modpl <- glm(Species ~ log(Area) + log(Elevation) + log(Nearest) + log(Scruz+0.1) + log(Adjacent), family=poisson, gala)
 
 c(deviance(modp),deviance(modpl))
